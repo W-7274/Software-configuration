@@ -1,0 +1,9 @@
+ 在  系统   ->  高级设置  ->  环境变量里添加
+   变量名称    ANTHROPIC_BASE_URL       	内容    "https://api.deepseek.com/anthropic"
+   变量名称    ANTHROPIC_AUTH_TOKEN 	内容    "你的DeepSeek API Key"  # 注意变量名是ANTHROPIC_AUTH_TOKEN（而非API_KEY）
+   变量名称    ANTHROPIC_MODEL 		内容    "deepseek-chat"
+
+
+对于非Deepseek的API同理，只需要改变对应内容即可
+
+然后只需要在想要的目录下打开中断，启动claude即可
