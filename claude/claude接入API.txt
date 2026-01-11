@@ -2,7 +2,7 @@
    变量名称    ANTHROPIC_BASE_URL       	内容    "https://api.deepseek.com/anthropic"
    变量名称    ANTHROPIC_AUTH_TOKEN 	内容    "你的DeepSeek API Key"  # 注意变量名是ANTHROPIC_AUTH_TOKEN（而非API_KEY）
    变量名称    ANTHROPIC_MODEL 		内容    "deepseek-chat"
-
+    变量名称    ANTHROPIC_SMALL_FAST_MODEL   内容     "deepseek-chat" #对应Claude的非思考模式 meta（windows是alt） + t  切换
 
 对于非Deepseek的API同理，只需要改变对应内容即可
 
