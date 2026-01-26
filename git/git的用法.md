@@ -169,6 +169,13 @@ git push origin <标签> // 标签需要单独push
 
 
 
+```
+git tag -d <标签> 删除本地存储的标签
+git push origin --delete <标签>   删除云端标签
+```
+
+
+
 ### 帮助指令 
 
 ```
