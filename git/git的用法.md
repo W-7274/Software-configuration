@@ -165,7 +165,7 @@ git tag //查看所有标签
 git push origin <标签> // 标签需要单独push
 ```
 
-
+**要记住，要先push内容，再git tag才能标记到你刚刚提交的，要是先git tag了，会标记到前一个版本**
 
 
 
