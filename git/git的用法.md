@@ -126,7 +126,7 @@ git add .
 #### 2.查看版本哈希值 -> 回退到对应的版本
 
 ```
-git log -n <number> --oneline    // 查看版本哈希值 number为要查看几个版本  第一个哈希值是当前版本对应的
+git log -n <number> --oneline    // 查看版本哈希值 number为要查看几个版本  当前未push的版本是无哈希值的
 ```
 
 ```
