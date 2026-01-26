@@ -1,9 +1,13 @@
- 在  系统   ->  高级设置  ->  环境变量里添加
-   变量名称    ANTHROPIC_BASE_URL       	内容    "https://api.deepseek.com/anthropic"
-   变量名称    ANTHROPIC_AUTH_TOKEN 	内容    "你的DeepSeek API Key"  # 注意变量名是ANTHROPIC_AUTH_TOKEN（而非API_KEY）
-   变量名称    ANTHROPIC_MODEL 		内容    "deepseek-chat"
-    变量名称    ANTHROPIC_SMALL_FAST_MODEL   内容     "deepseek-chat" #对应Claude的非思考模式 meta（windows是alt） + t  切换
+在  系统   ->  高级设置  ->  环境变量里添加
+  变量名称    ANTHROPIC_BASE_URL       	内容    "https://api.deepseek.com/anthropic"  // 用别的网站要换成对应的网址
+  变量名称    ANTHROPIC_AUTH_TOKEN 	内容    "你的DeepSeek API Key"  # 注意变量名是ANTHROPIC_AUTH_TOKEN（而非API_KEY）
+   
+以下分别对应Claude不同的模型，将其转换为我们想要的模型，也可以三个都是同一个
 
+  变量名称    ANTHROPIC_DEFAULT_HAIKU_MODEL 		内容    "deepseek-chat"或别的网址对应的模型名称，一定要严格根据网址给的模型名字来，确保正确调用
+  变量名称    ANTHROPIC_DEFAULT_OPUS_MODEL   内容     "deepseek-chat" 
+  变量名称    ANTHROPIC_DEFAULT_SONNET_MODEL   内容     "deepseek-chat"
+  
 对于非Deepseek的API同理，只需要改变对应内容即可
 
 然后只需要在想要的目录下打开中断，启动claude即可
