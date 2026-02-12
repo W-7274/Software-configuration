@@ -35,9 +35,36 @@ Git 的核心操作逻辑是：**改动文件 -> 暂存 -> 存档 -> 同步**。
 #### 2. 提交 (Commit)
 
 - **标准指令**：`git commit -m "提交说明"`。
+
 - **关于 `-m` 参数**：
   - **必须性**：每次提交必须有说明。如果不加，Git 会强制进入 Vim 等编辑器要求你补全。
+  
   - **作用**：在 Git 历史中标记你这次干了什么（如 "fix: 修复bug"）。
+  
+
+### 可以安装配置git cz 更规范
+
+安装
+
+```
+npm install -g commitizen
+```
+
+安装全局适配器
+
+```
+npm install -g cz-conventional-changelog
+```
+
+在用户根目录：`C\Users\名称`  下新建一个名为 `.czrc`文件,文件内容为
+
+```
+{
+  "path": "cz-conventional-changelog"
+}
+```
+
+
 
 #### 3. 推送 (Push) 若push失败则先pull再push
 
@@ -62,9 +89,11 @@ Git 的核心操作逻辑是：**改动文件 -> 暂存 -> 存档 -> 同步**。
 
 ### 三、 拉取更新 (Pull)
 
-当 GitHub 上的代码比你本地新时（比如你在另一台电脑改了代码）：
+当 GitHub 上的代码比你本地新时（比如你在另一台电脑改了代码）
 
-- **指令**：`git pull origin main`。
+或者连接别人仓库时需要先同步一下：
+
+- **指令**：`git pull origin main/或其他分支`。
 - **作用**：将云端的最新版本合并到你的本地工作区。
 
 ------
@@ -108,7 +137,18 @@ git add .
 2. **仅删云端 (本地保留文件)**：常用
    - **操作**：`git rm --cached <文件名>` -> 修改 `.gitignore` 忽略该文件 -> `git commit` -> `git push`。
    - **结果**：本地磁盘保留文件，但 GitHub 仓库中该文件被移除。
-
+3. **不改变云端但删除了对应的本地文件 (从云端拉了无用文件一直显示惹人烦)**：常用
+   
+   - **操作**：
+   
+     ```
+     git update-index --assume-unchanged <文件名>
+     ```
+   - **可随时恢复追踪**：
+   
+     ```
+     git update-index --no-assume-unchanged <文件名>
+     ```
 ------
 
 ### 六、 VS Code 界面功能对照
