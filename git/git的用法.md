@@ -19,6 +19,10 @@ code .
 - **配置身份**：执行 `git config --global user.name "你的名字"` 和 `git config --global user.email "你的邮箱"`。
 - **初始化仓库**：在目标项目文件夹执行 `git init`。 
 - **关联远程库**：`git remote add origin <远程仓库URL>`。
+- **一般在关联别人的仓库时需要拉取别人的一条分支：**
+- 先在本地创建并切换到一个分支，名称与你要拉取的分支名称一样``git checkout -b <branch_name>``
+- 然后`pull origin 分支`
+- 如果不同拉取的不同分支里有相同的文件名但内容不同，那么切换到不同分支，在本地看到的文件内容是与分支内容各自对应
 
 ------
 
