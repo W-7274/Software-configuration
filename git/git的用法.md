@@ -21,7 +21,7 @@ code .
 - **关联远程库**：`git remote add origin <远程仓库URL>`。
 - **一般在关联别人的仓库时需要拉取别人的一条分支：**
 - 先拉取云端想要的分支，这时候还没存入本地`git fetch origin <branch_name>`
-- 先在本地创建并切换到一个分支，名称与你要拉取的分支名称一样``git checkout -b <branch_name> origin/<branch_name>``
+- 先在本地创建并切换到一个分支``git checkout -b <branch_name> origin/<branch_name>``其实就是创建一个分支，以origin分支为模板
 - 然后`git pull origin <branch_name>`
 - 如果不同拉取的不同分支里有相同的文件名但内容不同，那么切换到不同分支，在本地看到的文件内容是与分支内容各自对应
 
