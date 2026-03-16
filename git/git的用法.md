@@ -115,7 +115,7 @@ npm install -g cz-conventional-changelog
 git add .
 ```
 
-会遵顼这个规则加入文件
+会遵顼这个规则加入文件  **`地址必须是相对地址`**
 
 ```
 /* # 忽略当前目录下所有文件和文件夹
